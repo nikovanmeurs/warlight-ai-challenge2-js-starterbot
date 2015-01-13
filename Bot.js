@@ -253,9 +253,11 @@ Bot.prototype.updateMap = function (data) {
  * @return String
  */
 Bot.prototype.pickStartingRegion = function (data) {
+    
+    var timeAvailable = data.shift();
 
     // shuffle the regions and return the first item
-    var randomRegion = data.shuffle().slice(0, 1);
+    var randomRegion  = data.shuffle().slice(0, 1);
 
     // parse to string
     return '' + randomRegion;
