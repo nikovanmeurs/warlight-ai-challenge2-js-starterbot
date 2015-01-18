@@ -90,8 +90,8 @@ Bot.prototype.run = function () {
  * @param Array data
  */
 Bot.prototype.settings = function (data) {
-    var key = data[0],
-        value = data[1];
+    var key   = data.shift(),
+        value = data.length > 1 ? data : data[0];
 
     // set key to value
     this.options[key] = value;
